@@ -1,11 +1,11 @@
-console.log("Home.js file is loaded");
+document.getElementById('btn-show-cashout').addEventListener('click',function(){
+    document.getElementById('cashout-form').classList.remove('hidden');
+    document.getElementById('addmoney-form').classList.add('hidden');
+    document.getElementById('random-card').classList.add('hidden');
+})
 
-document.getElementById('btn-money').addEventListener('click', function(event){
-    event.preventDefault();
-    
-    const addMoney = document.getElementById('add-ad-money').value;
-    
-    const pinInput = document.getElementById('input-pin').value;
-
-    
-});
+document.getElementById('btn-show-addmoney').addEventListener('click',function(){
+    document.getElementById('addmoney-form').classList.remove('hidden');
+    document.getElementById('cashout-form').classList.add('hidden');
+    document.getElementById('random-card').classList.add('hidden');
+})
