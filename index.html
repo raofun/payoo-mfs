@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mobile App</title>
+    <!-- Tailwind CSS + DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #e0f2fe 0%, #f8fafc 100%);
+            min-height: 100vh;
+        }
+        
+        .checkmark-circle {
+            width: 120px;
+            height: 120px;
+            border: 3px solid #60a5fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .checkmark {
+            width: 50px;
+            height: 50px;
+            stroke: #3b82f6;
+            stroke-width: 4;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="w-full max-w-sm">
+            <!-- Card Container -->
+            <div class="card bg-white shadow-2xl rounded-3xl p-8">
+                <!-- Logo/Checkmark Icon -->
+                <div class="flex justify-center mb-8">
+                    <div class="p-8">
+                        <img class="w-40" src="assets/payoo.png" alt="">
+                    </div>
+                </div>
+                
+                <!-- Login Form -->
+                <div class="space-y-6">
+                    <!-- Mobile Number Input -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-gray-700 font-semibold text-sm">Mobile Number</span>
+                        </label>
+                        <input 
+                            type="tel" 
+                            placeholder="Enter your number" 
+                            id="phn-num"
+                            class="input input-bordered w-full bg-gray-50 border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100 rounded-xl" 
+                            maxlength="10"
+                        />
+                    </div>
+                    
+                    <!-- 4 Digit PIN Input -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-gray-700 font-semibold text-sm">4 Digit Pin</span>
+                        </label>
+                        <input 
+                            type="password" 
+                            placeholder="Enter 4 Digit Pin" 
+                            id="pin-num"
+                            class="input input-bordered w-full bg-gray-50 border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100 rounded-xl" 
+                            maxlength="4"
+                            pattern="[0-9]{4}"
+                        />
+                    </div>
+                    
+                    <!-- Login Button -->
+                    <button id="btn-login" class="btn btn-primary w-full bg-blue-500 hover:bg-blue-600 border-none text-white font-semibold text-base rounded-full h-14 shadow-lg hover:shadow-xl transition-all duration-200">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="resourses/login.js"></script>
+</body>
+</html>
